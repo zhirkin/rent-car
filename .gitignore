@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/node,sass,windows
-# Edit at https://www.gitignore.io/?templates=node,sass,windows
+# Created by https://www.gitignore.io/api/node,windows
+# Edit at https://www.gitignore.io/?templates=node,windows
 
 ### Node ###
 # Logs
@@ -44,7 +44,6 @@ build/Release
 
 # Dependency directories
 node_modules/
-sass/
 jspm_packages/
 
 # TypeScript v1 declaration files
@@ -109,12 +108,6 @@ dist/
 tmp/
 temp/
 
-### Sass ###
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
-
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -141,4 +134,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/node,sass,windows
+# End of https://www.gitignore.io/api/node,windows
