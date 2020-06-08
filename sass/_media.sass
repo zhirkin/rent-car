@@ -70,14 +70,155 @@
       max-width: 276px
       width: 100%
       margin: 0 2rem 0 0
+  .order
+    &__row
+      justify-content: space-around
+    &__col-33
+      margin: 0 0 0 2rem
+      &--last
+        max-width: 345px
+  .contacts
+    &__row
+      justify-content: center
+    &__cards
+      order: 2
+      margin: 0
+      &--first
+        margin: 0 9rem 0 0
+      &--second
+        order: 3
+      &--slider
+        width: 100%
+        order: 1
+    &__slider-container
+      max-width: 33.657rem
+  .footer
+    &__section
+      margin: 0 2rem
+@media screen and (max-width: 992px)
+  .cards
+    &__subtitle
+      &--hover
+        &:hover
+          color: #777777
+          text-decoration: none
+  svg:hover #vk-f
+    fill: #444
+  svg:hover #vk-fs
+    stroke: #444
+  svg:hover #youtube-f
+    fill: #444
+  svg:hover #youtube-fs
+    stroke: #444
+  svg:hover #viber-f
+    fill: #444
+  svg:hover #viber-fs
+    stroke: #444
+  svg:hover #gmail-f
+    fill: #444
+  svg:hover #gmail-fs
+    stroke: #444
+  .menu
+    &__item
+      &:hover
+        color: #dddddd
+        &::after
+          content: ''
+          width: 100%
+          height: 0.1rem
+          background-color: $light
+          position: inherit
+          top: 27px
+          left: 0
+  .video
+    &__play
+      &:hover
+        border-radius: 0
+        border: 0
+        opacity: 1
+  .places
+    &__video 
+      &::after
+        background: transparent  
+      &:hover + .places__info
+          color: black
+  .button-up
+    &:hover
+      animation: none
+  .hamburger
+    display: block
+    position: absolute
+    right: 0
+    top: 133px
+    margin-right: 6rem
+    transform: translateY (-50%)
+    width: 26px
+    height: 12px
+    span
+      display: block
+      height: 3px
+      width: 100%
+      margin-bottom: 2px
+      background-color: white
+      transition: 0.5s all
+    &_active
+      span
+        margin-bottom: -2px
+        &:nth-child(1)
+          transform: translateY(3px) rotate(-45deg)
+        &:nth-child(2)
+          display: none
+        &:nth-child(3) 
+          transform: translateY(3px) rotate(-45deg)
+  .nav
+    display: none
+  .popup-menu
+    &-active
+      display: flex
+  .menu
+    &__item
+      padding-right: 0
+      border: none
+      margin: 10px 0
+      padding-bottom: 15px
+      text-align: center
+    &__nav
+      &-popup
+        position: fixed
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        top: 0
+        left: -100%
+        width: 56%
+        height: 100vh
+        padding: 20px 15px
+        background-color: rgba(0,0 ,0, .8)
+        transition: 0.8s all
+        z-index: 10
+        &_active
+          left: 0
+  
+      
 @media screen and ( max-width: 950px )
   .menu
     &__nav
-      display: flex
-      flex-direction: column
-    &__item
-      margin: 0 0 1rem 0
-
+      display: none
+  .order
+    &::before
+      margin: 0 auto 5rem auto
+    &__col-33
+      max-width: 578px
+      margin: 0
+      &--last
+        display: flex
+        justify-content: center
+    &__title
+      text-align: center
+  .modal
+    display: flex
+    justify-content: center
 @media screen and ( max-width: 800px )
   .slider-container
     max-width: 21.257rem
@@ -85,8 +226,13 @@
     &__slider-container
       max-width: 33.057rem
       width: 100%
-
+  .contacts
+    &__slider-container
+      max-width: 33.657rem
 @media screen and ( max-width: 600px )
+  .button-up
+    width: 45px
+    height: 100px
   .hero
     padding: 6.214rem 2.143rem 0 2.143rem
   .beauty
@@ -117,6 +263,36 @@
         top: 65px
       &-next1
         top: 65px
+  .contacts
+    &__slider-container
+      max-width: 20.657rem
+      height: 117px
+    &__cards
+      &--first
+        margin: 0
+  .slider
+    &__title
+      width: 181px
+      font-size: 0.87rem
+      padding: 0
+      line-height: normal
+      margin: 0.4rem 0 0.2rem 0
+    &__subtitle
+      margin: 0
+      font-size: 0.87rem
+      line-height: normal
+      width: 174px
+  .swiper
+    &-button
+      &-prev2
+        top: 60px
+        left: 208px
+      &-next2
+        top: 60px
+        left: 242px
+    &-pagination2
+      top: 1rem
+      left: 14.6rem
 @media screen and ( max-width: 524px )
   .hero
     padding: 3.214rem 2.143rem 0 2.143rem
@@ -156,6 +332,11 @@
         top: 40px
       &-next1
         top: 40px
+  .contacts
+    &__slider
+      &-container
+        max-width: 20.657rem
+        height: 117px
 @media screen and ( max-width: 375px )
   .logo
     &__text
@@ -183,3 +364,19 @@
     padding: 2rem 0 2rem 0
     &__header
       margin: 0 0 5rem 0
+  .contacts
+    &__cards
+      width: 100%
+      &--first, &--second
+        text-align: center
+    &__slider
+      &-container
+        max-width: 20.657rem
+        height: 117px
+  .swiper
+    &-pagination2
+      width: 5rem
+      left: 14.9rem
+    &-pagination
+      &-total2
+        right: 95px

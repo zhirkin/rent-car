@@ -1,6 +1,7 @@
 <?php
 
 $userPhone = $_POST['userPhone'];
+$userChoise = $_POST['userChoise'];
 
 // Load Composer's autoloader
 require 'phpmailer/Exception.php';
@@ -29,9 +30,9 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body    = "Телефон заказчика: ${userPhone}.;
+    $mail->Body    = "Выбранный тариф заказчика: ${userChoise}, Телефон заказчика: ${userPhone}";
 
-    if ($mail->send()) {
+    if($mail->send()) {
         echo "ok";
     } else {
         echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";

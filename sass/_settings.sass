@@ -68,10 +68,6 @@ html
   font-size: 2.3rem
   letter-spacing: 0.04rem
 
-.footer__link
-  &:hover
-    fill: red
-
 input
   outline: none
 
@@ -80,3 +76,32 @@ select
 
 button
   outline: none
+
+div
+  outline: none
+  
+.button-up
+  background: transparent url('../img/up.png') center center/cover no-repeat
+  width: 90px
+  height: 200px			
+  padding: 15px
+  margin: 100px 20px 20px 20px
+  z-index: 999
+  &:hover
+    cursor: pointer
+    animation: bounce 1s
+@keyframes bounce 
+	0%, 20%, 60%, 100% 
+		transform: translateY(0)
+		transform: translateY(0)
+	
+
+	40% 
+		transform: translateY(-20px)
+		transform: translateY(-20px)
+	
+
+	80% 
+		transform: translateY(-10px)
+		transform: translateY(-10px)
+
